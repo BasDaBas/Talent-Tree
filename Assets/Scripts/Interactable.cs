@@ -28,6 +28,7 @@ public class Interactable : MonoBehaviour {
             {
                 // Interact with the object
                 hasInteracted = true;
+                Debug.Log("Interact Calling");
                 Interact();
             }
         }
@@ -36,12 +37,14 @@ public class Interactable : MonoBehaviour {
     // This method is meant to be overwritten
     public virtual void Interact()
     {
-
+        Debug.Log("Virtual void Interact Called");
     }
 
     // Called when the object starts being focused
     public void OnFocused(Transform playerTransform)
     {
+        Debug.Log("OnFocused Called");
+
         isFocus = true;
         hasInteracted = false;
         player = playerTransform;
@@ -50,6 +53,8 @@ public class Interactable : MonoBehaviour {
     // Called when the object is no longer focused
     public void OnDefocused()
     {
+        Debug.Log("OnDeFocused Called");
+
         isFocus = false;
         hasInteracted = false;
         player = null;

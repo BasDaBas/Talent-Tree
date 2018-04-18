@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
 
     public delegate void OnFocusChanged(Interactable newFocus);
     public OnFocusChanged onFocusChangedCallback;
+    public Transform posToCastRay;
 
     public Interactable focus;	// Our current In range: Item, Enemy etc.
 
@@ -33,22 +34,28 @@ public class PlayerController : MonoBehaviour {
         {
              int layerMask = 1 << 8;
 
+
             // This would cast rays only against colliders in layer 8.
             // But instead we want to collide against everything except layer 8. The ~ operator does this, it inverts a bitmask.
             layerMask = ~layerMask;
             //We create a ray
             RaycastHit hit;
             //if the ray hits
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, layerMask))
+            Debug.DrawRay(posToCastRay.position, transform.TransformDirection(Vector3.forward), Color.green);
+            if (Physics.Raycast(posToCastRay.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, layerMask))
             {
                 float radius = hit.transform.GetComponent<Interactable>().radius;
                 float distance = Vector3.Distance(transform.position, hit.transform.position);
-
                 if (distance <= radius)
                 {
+                    Debug.Log("Hit " + hit.transform.name);
                     SetFocus(hit.collider.GetComponent<Interactable>());
                 }
-                                
+
+            }
+            else
+            {
+                Debug.Log("Didnt hit anything");
             }
         }
 	}

@@ -12,9 +12,9 @@ public class CharacterMovement : MonoBehaviour {
     private bool grounded = false;
     private Vector3 moveDirection = Vector3.zero;
     private bool isWalking = false;
-    private string moveStatus = "idle";
-    private bool jumping = false;
-    private float moveSpeed = 0f;
+    //private string moveStatus = "idle";
+    //private bool jumping = false;
+    //private float moveSpeed = 0f;
  
     void Update()
     {

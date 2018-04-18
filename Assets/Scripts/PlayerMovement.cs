@@ -121,6 +121,11 @@ public class PlayerMovement : MonoBehaviour {
 
         grounded = (flags & CollisionFlags.Below) != 0;
 
+        if (Input.GetMouseButton(1) || Input.GetMouseButton(0))
+            Cursor.lockState = (CursorLockMode.Locked);
+        else
+            Cursor.lockState = (CursorLockMode.None);
+
     }
 
     void OnControllerColliderHit(ControllerColliderHit hit)
