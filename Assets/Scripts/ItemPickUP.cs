@@ -2,12 +2,7 @@
 
 public class ItemPickUP : Interactable {
 
-    public Item item;
-
-    public void Start()
-    {
-
-    }
+    public Item item; // Item to put in the inventory on pickup
 
     //Every override function Interact will be called when its called from Script: Interactable.
     public override void Interact()
@@ -18,10 +13,8 @@ public class ItemPickUP : Interactable {
 
     void PickUp()
     {
-        Debug.Log("Picking up " + item.name);
-        Debug.Log(Inventory.instance.Add(item));
-        Inventory.instance.Add(item);
-
+        Inventory.instance.Add(item);       // Add to inventory
+        // If successfully picked up
         Destroy(gameObject);         
         
     }

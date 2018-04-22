@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
 
-    public float jumpSpeed = 30.0f;
+    public float jumpSpeed = 10.0f;
     public float gravity = 55.0f;
     public float walkSpeed = 90.0f;
     public float runSpeed = 70.0f;
@@ -31,14 +31,11 @@ public class PlayerMovement : MonoBehaviour {
     void Update()
     {
         //force controller down slope. Disable jumping
-        if (myAng > 50)
-        {
-            canJump = false;
-        }
-        else
-        {
+        if (myAng > 50)        
+            canJump = false;        
+        else        
             canJump = true;
-        }
+        
 
         if (grounded)
         {
@@ -72,12 +69,12 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             isWalking = false;
-            jumpSpeed = 35f;
+            jumpSpeed = 15f;
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             isWalking = true;
-            jumpSpeed = 30f;
+            jumpSpeed = 10f;
         }
 
 

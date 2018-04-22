@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraMovement : MonoBehaviour {
+/*public class CameraMovement : MonoBehaviour {
 
     public Transform target;
 
@@ -28,9 +28,9 @@ public class CameraMovement : MonoBehaviour {
     private float y = 0f;
 
     private Vector3 fwd = new Vector3();
-    private Vector3 rightVector = new Vector3();
-    private Vector3 upVector = new Vector3();
-    private Vector3 movingVector = new Vector3();
+    //private Vector3 rightVector = new Vector3();
+    //private Vector3 upVector = new Vector3();
+    //private Vector3 movingVector = new Vector3();
     private Vector3 collisionVector = new Vector3();
     private bool isColliding = false;
    
@@ -159,4 +159,4 @@ public class CameraMovement : MonoBehaviour {
 
         return Vector3.zero;
     }
-}
+}*/

@@ -285,27 +285,39 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\FantasyEffects\Script\DemoManager.cs" />
+    <Compile Include="Assets\FantasyEffects\Script\FairyDustRandomPosition.cs" />
+    <Compile Include="Assets\FantasyEffects\Script\FairyMeteorAddForceDemo.cs" />
+    <Compile Include="Assets\FantasyEffects\Script\Spin.cs" />
+    <Compile Include="Assets\FantasyEffects\Script\Test.cs" />
     <Compile Include="Assets\RPG Folder\RPGPackFree\Scripts\BowString.cs" />
     <Compile Include="Assets\RPG Folder\RPGPackFree\Scripts\OpenChest.cs" />
+    <Compile Include="Assets\Scripts\CharacterCombat.cs" />
+    <Compile Include="Assets\Scripts\Controllers\EnemyController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyStats.cs" />
+    <Compile Include="Assets\Scripts\Helper\ConvertToRegularMesh.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />
-    <Compile Include="Assets\Scripts\Inventory\EquipmentManager.cs" />
     <Compile Include="Assets\Scripts\Inventory\Inventory.cs" />
     <Compile Include="Assets\Scripts\Inventory\InventorySlot.cs" />
     <Compile Include="Assets\Scripts\Inventory\InventoryUI.cs" />
     <Compile Include="Assets\Scripts\ItemPickUP.cs" />
+    <Compile Include="Assets\Scripts\Managers\EquipmentManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\PlayerManager.cs" />
+    <Compile Include="Assets\Scripts\Old Scripts\Attributes.cs" />
     <Compile Include="Assets\Scripts\Old Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Old Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Old Scripts\CharacterMovement.cs" />
     <Compile Include="Assets\Scripts\Old Scripts\PlayerAnimations.cs" />
-    <Compile Include="Assets\Scripts\Player GUI\Attributes.cs" />
     <Compile Include="Assets\Scripts\Player GUI\AttributesDisplay.cs" />
-    <Compile Include="Assets\Scripts\Player GUI\PlayerAttributes.cs" />
+    <Compile Include="Assets\Scripts\Player GUI\CharacterStats.cs" />
     <Compile Include="Assets\Scripts\Player GUI\PlayerHandler.cs" />
     <Compile Include="Assets\Scripts\Player GUI\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Player GUI\SkillDisplay.cs" />
     <Compile Include="Assets\Scripts\Player GUI\Skills.cs" />
+    <Compile Include="Assets\Scripts\Player GUI\Stat.cs" />
     <Compile Include="Assets\Scripts\PlayerCamera.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\System\AttributeType.cs" />
     <Compile Include="Assets\Scripts\System\Buff.cs" />
@@ -313,12 +325,16 @@
     <Compile Include="Assets\Scripts\System\Icon.cs" />
     <Compile Include="Assets\Scripts\System\Item.cs" />
     <Compile Include="Assets\Scripts\System\ItemType.cs" />
-    <Compile Include="Assets\Scripts\System\Mobs\Mob.cs" />
-    <Compile Include="Assets\Scripts\System\Mobs\MobAttributes.cs" />
-    <Compile Include="Assets\Scripts\System\Mobs\MobRanks.cs" />
-    <Compile Include="Assets\Scripts\System\Mobs\MobTypes.cs" />
     <Compile Include="Assets\Scripts\System\Trinket.cs" />
     <Compile Include="Assets\Scripts\System\Weapon.cs" />
+    <Compile Include="Assets\Scripts\Wizard\CastSpell.cs" />
+    <Compile Include="Assets\Scripts\Wizard\Fireball.cs" />
+    <Compile Include="Assets\Scripts\Wizard\Spell.cs" />
+    <Compile Include="Assets\Scripts\Wizard\SpellCreator.cs" />
+    <Compile Include="Assets\Scripts\Wizard\SpellManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\FantasyEffects\README.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

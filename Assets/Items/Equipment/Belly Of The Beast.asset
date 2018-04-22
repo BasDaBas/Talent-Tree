@@ -11,11 +11,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88bb520376a09af4792621f178fa7feb, type: 3}
   m_Name: Belly Of The Beast
   m_EditorClassIdentifier: 
-  itemName: 
-  description: 
+  itemName: Chest
+  description: Chest
   icon: {fileID: 21300000, guid: 76b02a38bda93df45ab058a0a6879844, type: 3}
   itemType: 1
   isDefaultItem: 0
   equipSlot: 2
-  ArmorModifier: 10
+  armorModifier: 10
   damageModifier: 10
+  mesh: {fileID: 137593489696449710, guid: bbfadea0cd056c240b9dff62a5a44b97, type: 2}
+  coveredMeshRegions: 0100000002000000

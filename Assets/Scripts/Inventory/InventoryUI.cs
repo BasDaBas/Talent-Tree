@@ -2,27 +2,42 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/* This object updates the inventory UI. */
 public class InventoryUI : MonoBehaviour {
 
-    Inventory inventory;
+    public Transform itemsParent;                   // The parent object of all the items
+    public GameObject inventoryUI;	                // The entire UI
+    public PlayerMovement playerMovementScript;     // The playerMovementScript
+    public PlayerCamera playerCameraMovement;     // The CameraMovementScript
 
-    public Transform itemsParent;
+    Inventory inventory;                // Our current inventory
 
-    InventorySlot[] slots;
+    InventorySlot[] slots;              // List of all the slots
+
 
     // Use this for initialization
     void Start () {
 
         inventory = Inventory.instance;
-        inventory.onItemChangedCallback += UpdateUI;
+        inventory.onItemChangedCallback += UpdateUI;        // Subscribe to the onItemChanged callback
+        
+        // Populate our slots array
         slots = itemsParent.GetComponentsInChildren<InventorySlot>();
+        //set false after it  has the instance otherwise it bugs out.
+        inventoryUI.SetActive(false);
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            inventoryUI.SetActive(!inventoryUI.activeSelf);
+            playerMovementScript.enabled = !inventoryUI.activeSelf;
+            playerCameraMovement.enabled = !inventoryUI.activeSelf;
+        }
+    }
 
     void UpdateUI()
     {

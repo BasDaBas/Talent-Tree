@@ -218,6 +218,8 @@ GameObject:
   - component: {fileID: 143289532597562060}
   - component: {fileID: 114163275053810594}
   - component: {fileID: 114650941296594516}
+  - component: {fileID: 114392716537788646}
+  - component: {fileID: 114946871458736134}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -415,6 +417,21 @@ GameObject:
   - component: {fileID: 4839760048263174}
   m_Layer: 8
   m_Name: Fingers02_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1761294675694746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4739721340691574}
+  m_Layer: 8
+  m_Name: PosToCastRay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -792,6 +809,19 @@ Transform:
   m_Father: {fileID: 4670927377223072}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4739721340691574
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1761294675694746}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.63, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4977777614910086}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4747580797897564
 Transform:
   m_ObjectHideFlags: 1
@@ -927,6 +957,7 @@ Transform:
   m_Children:
   - {fileID: 4777980873587934}
   - {fileID: 4610219783848010}
+  - {fileID: 4739721340691574}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -972,15 +1003,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a7da7897fc043744acc92658973567f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 30
+  jumpSpeed: 10
   gravity: 55
-  walkSpeed: 90
-  runSpeed: 70
+  walkSpeed: 10
+  runSpeed: 20
   rotateSpeed: 150
   grounded: 0
   camera1: {fileID: 0}
   isJumping: 0
   canJump: 1
+--- !u!114 &114392716537788646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1338373584116438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2443e6d6c27684a4fade2861a0715fdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthText: {fileID: 0}
+  healthImage: {fileID: 0}
+  manaText: {fileID: 0}
+  manaImage: {fileID: 0}
+  characterName: {fileID: 0}
+  characterLvl: {fileID: 0}
+  Name: BasDaBas
+  PlayerMaxHp: 1000
+  PlayerMaxMana: 500
+  armor:
+    baseValue: 1
+  damage:
+    baseValue: 1
 --- !u!114 &114650941296594516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -992,6 +1047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1fbc82eae5f06142aa1326a6cd3f482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  posToCastRay: {fileID: 4739721340691574}
   focus: {fileID: 0}
   movementMask:
     serializedVersion: 2
@@ -999,6 +1055,19 @@ MonoBehaviour:
   interactionMask:
     serializedVersion: 2
     m_Bits: 0
+--- !u!114 &114946871458736134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1338373584116438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a45ad95c069af164da38f3e417786152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSpeed: 1
+  attackDelay: 0.6
 --- !u!137 &137548376537191266
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

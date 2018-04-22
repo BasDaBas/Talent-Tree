@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0b2c0e874453b94396b693954105ee6, type: 3}
+  m_Name: Spark
+  m_EditorClassIdentifier: 
+  spellName: Spark
+  spellPrefab: {fileID: 104342, guid: dda25b5983c0161428703721417513c6, type: 2}
+  SpellCollisionParticle: {fileID: 104342, guid: dda25b5983c0161428703721417513c6,
+    type: 2}
+  spellIcon: {fileID: 2800000, guid: 33470548a8c102c45bec7658b3637d33, type: 3}
+  spellManaCost: 5
+  spellMinDamage: 10
+  spellMaxDamage: 20
+  projectileSpeed: 10
+  spellCooldown: 2
+  spellCastSpeed: 0.7

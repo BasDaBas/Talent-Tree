@@ -17,5 +17,5 @@ MonoBehaviour:
   itemType: 1
   isDefaultItem: 0
   equipSlot: 7
-  ArmorModifier: 50
-  damageModifier: 2
+  armorModifier: 10
+  damageModifier: 10

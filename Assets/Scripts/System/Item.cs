@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/* The base item class. All items should derive from this. */
+
+
 [CreateAssetMenu(fileName = "New Item" , menuName = "Inventory/Item")]
 public class Item : ScriptableObject {
-
-    [SerializeField] string itemName;
-    [SerializeField] string description;
-    [SerializeField] Sprite icon;
-    [SerializeField] ItemType itemType;
-    [SerializeField] bool isDefaultItem = false;
+        
+    [SerializeField] string itemName;               // Name of the item
+    [SerializeField] string description;	        // Item Description
+    [SerializeField] Sprite icon;                   // Item icon
+    [SerializeField] ItemType itemType;             //Item type
+    [SerializeField] bool isDefaultItem = false;    // Is the item default wear?
 
     public string Name
     {

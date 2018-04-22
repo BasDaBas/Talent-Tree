@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88bb520376a09af4792621f178fa7feb, type: 3}
+  m_Name: PlateLegs of shit
+  m_EditorClassIdentifier: 
+  itemName: Plate legs
+  description: Plate legs
+  icon: {fileID: 21300000, guid: 76b02a38bda93df45ab058a0a6879844, type: 3}
+  itemType: 1
+  isDefaultItem: 0
+  equipSlot: 1
+  armorModifier: 10
+  damageModifier: 10
+  mesh: {fileID: 137318680366583156, guid: e12a88d9faa412b40a8cec45449c2deb, type: 2}
+  coveredMeshRegions: 00000000
