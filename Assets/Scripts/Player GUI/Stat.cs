@@ -6,9 +6,11 @@ using UnityEngine;
 [System.Serializable]
 public class Stat
 {
-    //public Attributes stats;
+    public string StatName; 
+
     [SerializeField]
-    private int baseValue;       // Starting value
+    public int baseValue;       // Starting value
+
     // List of modifiers that change the baseValue
     private List<int> modifiers = new List<int>();
 

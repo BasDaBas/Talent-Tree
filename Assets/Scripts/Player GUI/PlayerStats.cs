@@ -1,11 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : CharacterStats {
 
-	// Use this for initialization
-	void Start () {
+    //Get the UI Components;
+    public Text attributeText;
+    public Text attributeAmount;
+
+    // Use this for initialization
+    void Start ()
+    {
         EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
 	}
 
@@ -18,13 +24,28 @@ public class PlayerStats : CharacterStats {
     {
         if (newItem != null)
         {
-            armor.AddModifier(newItem.armorModifier);
-            damage.AddModifier(newItem.damageModifier);
+            List<Stat>.Enumerator PlayerAttr = stats.GetEnumerator();
+            //List<Stat>.Enumerator EquipmentAttr = newItem.equipmentStats.GetEnumerator();
+            while (PlayerAttr.MoveNext())
+            {
+                foreach (Stat equipmentAttr in newItem.equipmentStats)
+                {
+                    if (equipmentAttr.StatName == PlayerAttr.Current.StatName)
+                    {
+                        attributeAmount.text = PlayerAttr.Current.ToString();
+                    }
+                }
+                
+            }
+            
+            
         }
         if (oldItem != null)
         {
-            armor.RemoveModifier(oldItem.armorModifier);
-            damage.RemoveModifier(oldItem.damageModifier);
+            foreach (Stat stat in stats)
+            {
+                stat.RemoveModifier(oldItem.armorModifier);
+            }
         }
         
     }

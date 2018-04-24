@@ -29,7 +29,6 @@ public class EquipmentManager : MonoBehaviour {
 
     private void Start()
     {
-        //targetMesh = GetComponent<SkinnedMeshRenderer>();
         inventory = Inventory.instance;     // Get a reference to our inventory
 
         // Initialize currentEquipment based on number of equipment slots
@@ -63,6 +62,8 @@ public class EquipmentManager : MonoBehaviour {
         newMesh.bones = targetMesh.bones;
         newMesh.rootBone = targetMesh.rootBone;
         currentMeshes[slotIndex] = newMesh;
+
+        //Todo Update player stats
         
     }
     //Unequip Gear
@@ -103,7 +104,7 @@ public class EquipmentManager : MonoBehaviour {
         EquipDefaultItems();
     }
 
-    
+    //character has no blendshapes so we  cant use this.
     /*void SetEquipmentBlendShapes(Equipment item, int weight)
     {
         foreach (Equipment.EquipmentMeshRegion blendShape in item.coveredMeshRegions)
@@ -112,7 +113,7 @@ public class EquipmentManager : MonoBehaviour {
             targetMesh.SetBlendShapeWeight((int)blendShape, weight);
         }
     }*/
-    
+    //Equip the default items of the character
     void EquipDefaultItems()
     {
         foreach (Equipment item in defaultItems)
@@ -121,11 +122,16 @@ public class EquipmentManager : MonoBehaviour {
         }
     }
 
+    void UpdatePlayerStats()
+    {
+
+
+    }
+
+    //Unequip all
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            UnEquipAll();
-        }
+        if (Input.GetKeyDown(KeyCode.U))        
+            UnEquipAll();        
     }
 }

@@ -119,13 +119,15 @@ public class CastSpell : MonoBehaviour {
         else
         {
             GameObject spellObject = Instantiate(spell.spellPrefab, magicSpawn.position, magicSpawn.rotation);
-            spellObject.AddComponent<Rigidbody>();
+            if (!spellObject.GetComponent<Rigidbody>())
+                spellObject.AddComponent<Rigidbody>();
+
             spellObject.GetComponent<Rigidbody>().useGravity = false;
             spellObject.GetComponent<Rigidbody>().velocity = spellObject.transform.forward * spell.projectileSpeed;
             spellObject.name = spell.spellName;
             spellObject.transform.parent = GameObject.Find("SpellManager").transform;
 
-            Destroy(spellObject, 2f);
+            Destroy(spellObject, 3f); //this needs to be casted from the spell itself;
 
         }
         

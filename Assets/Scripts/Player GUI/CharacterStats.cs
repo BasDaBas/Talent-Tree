@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class CharacterStats : MonoBehaviour
 {
 
-    [Header("Main Player UI elements")]
+    [Header("Main UI elements")]
     public Text healthText;
     public Image healthImage;
     public Text manaText;
@@ -17,7 +17,7 @@ public class CharacterStats : MonoBehaviour
     public Text characterName;
     public Text characterLvl;
 
-    [Header("Main Player Stats")]
+    [Header("Main  Stats")]
     public string Name;        
     public int maxHP = 100;
     public int currentHp;
@@ -26,8 +26,21 @@ public class CharacterStats : MonoBehaviour
     public int currentMana;
     public int manaRegen = 1;
 
-    public Stat armor;
-    public Stat damage;
+    [Header("Other Stats")]
+    public List<Stat> stats = new List<Stat>();
+    public Stat Armor;
+    public Stat AttackDamage;
+    public Stat AttackSpeed;
+    public Stat BockChance;
+    public Stat CritChance;
+    public Stat Dexterity;
+    public Stat Haste;
+    public Stat MagicPenatration;
+    public Stat Strength;
+    public Stat Versatility;
+    public Stat Vitality;
+    public Stat Wisdom;
+
 
     #region oldStuff
     /*
@@ -101,7 +114,7 @@ public class CharacterStats : MonoBehaviour
     public void TakeDamage(int damage)
     {
         // Subtract the armor value
-        damage -= armor.GetValue();
+        damage -= Armor.GetValue();
         damage = Mathf.Clamp(damage, 0, int.MaxValue);
 
         // Damage the character

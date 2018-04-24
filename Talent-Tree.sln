@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Talent-Tree.CSharp", "Talent-Tree.CSharp.csproj", "{3D346CCF-A247-063F-CDD7-512E9579DA0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Talent-Tree.CSharp.Editor", "Talent-Tree.CSharp.Editor.csproj", "{39734129-CF25-AA1B-780B-CC17C57E820F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D346CCF-A247-063F-CDD7-512E9579DA0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D346CCF-A247-063F-CDD7-512E9579DA0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D346CCF-A247-063F-CDD7-512E9579DA0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D346CCF-A247-063F-CDD7-512E9579DA0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39734129-CF25-AA1B-780B-CC17C57E820F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39734129-CF25-AA1B-780B-CC17C57E820F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39734129-CF25-AA1B-780B-CC17C57E820F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39734129-CF25-AA1B-780B-CC17C57E820F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

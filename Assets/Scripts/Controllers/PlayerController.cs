@@ -27,22 +27,16 @@ public class PlayerController : MonoBehaviour {
 
         if (EventSystem.current.IsPointerOverGameObject())        
             return;
-         
+
 
         //If press E
         if (Input.GetKeyDown(KeyCode.E))
         {
-             int layerMask = 1 << 8;
-
-
-            // This would cast rays only against colliders in layer 8.
-            // But instead we want to collide against everything except layer 8. The ~ operator does this, it inverts a bitmask.
-            layerMask = ~layerMask;
             //We create a ray
             RaycastHit hit;
             //if the ray hits
             Debug.DrawRay(posToCastRay.position, transform.TransformDirection(Vector3.forward), Color.green);
-            if (Physics.Raycast(posToCastRay.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, layerMask))
+            if (Physics.Raycast(posToCastRay.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, interactionMask))
             {
                 float radius = hit.transform.GetComponent<Interactable>().radius;
                 float distance = Vector3.Distance(transform.position, hit.transform.position);
@@ -51,12 +45,9 @@ public class PlayerController : MonoBehaviour {
                     Debug.Log("Hit " + hit.transform.name);
                     SetFocus(hit.collider.GetComponent<Interactable>());
                 }
-
             }
             else
-            {
                 Debug.Log("Didnt hit anything");
-            }
         }
 	}
     //Can be used for Items, enemies etc.
